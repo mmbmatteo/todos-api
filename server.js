@@ -30,8 +30,8 @@ app.get('/todos/:id', function (req, res) {
 	var todoId = parseInt(req.params.id);
 	
 	//Iterate
-	todos.forEach(function (todo){
-		if (todoId === todo.id){
+	todos.forEach(function (todo) {
+		if (todoId === todo.id) {
 			res.json(todo);
 			return;
 		}
@@ -42,3 +42,5 @@ app.get('/todos/:id', function (req, res) {
 app.listen(PORT, function (){
 console.log('Express listening on port ' + 3000);
 });
+
+git diff test
