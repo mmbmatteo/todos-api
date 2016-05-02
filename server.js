@@ -6,10 +6,7 @@ var app = express();
 var PORT = process.env.PORT || 3000;
 var todos = [];
 var todoNextId = 1;
-//app.use(bodyParser.json());
-
-app.use(express.json());
-app.use(express.urlencoded());
+app.use(bodyParser.json());
 
 //GET /[root]
 app.get('/', function (req, res) {
