@@ -12,5 +12,8 @@
     "body-parser": "^1.13.3",
     "express": "^4.13.3",
     "underscore":"^1.8.3"
-  }
+  },
+  "engines": {
+    "node": "4.4.3", 
+    "npm": "2.15.1" }
 }
