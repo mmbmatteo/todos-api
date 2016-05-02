@@ -1,0 +1,149 @@
+C:\Users\admin\MATTEO_VAIO\codingTests\nodeCourse\todo-api>heroku create
+Creating app... fathomless-wildwood-74991
+https://fathomless-wildwood-74991.herokuapp.com/ | https://git.heroku.com/fathomless-wildwood-74991.git
+
+C:\Users\admin\MATTEO_VAIO\codingTests\nodeCourse\todo-api>heroku rename matteo-todo-api
+Renaming fathomless-wildwood-74991 to matteo-todo-api... done
+https://matteo-todo-api.herokuapp.com/ | https://git.heroku.com/matteo-todo-api.git
+Git remote heroku updated
+ !    Don't forget to update git remotes for all other local checkouts of the app.
+
+C:\Users\admin\MATTEO_VAIO\codingTests\nodeCourse\todo-api>git push heroku master
+Counting objects: 14, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (13/13), done.
+Writing objects: 100% (14/14), 1.61 KiB | 0 bytes/s, done.
+Total 14 (delta 5), reused 0 (delta 0)
+remote: Compressing source files... done.
+remote: Building source:
+remote:
+remote: -----> Node.js app detected
+remote:
+remote: -----> Creating runtime environment
+remote:
+remote:        NPM_CONFIG_LOGLEVEL=error
+remote:        NPM_CONFIG_PRODUCTION=true
+remote:        NODE_ENV=production
+remote:        NODE_MODULES_CACHE=true
+remote:
+remote: -----> Installing binaries
+remote:        engines.node (package.json):  unspecified
+remote:        engines.npm (package.json):   unspecified (use default)
+remote:
+remote:        Resolving node version (latest stable) via semver.io...
+remote:        Downloading and installing node 5.11.0...
+remote:        Using default npm version: 3.8.6
+remote:
+remote: -----> Restoring cache
+remote:        Skipping cache restore (new runtime signature)
+remote:
+remote: -----> Building dependencies
+remote:        Pruning any extraneous modules
+remote:        Installing node modules (package.json)
+remote:        todo-api@1.0.0 /tmp/build_0927e90bcf5ccd6291d40a59dbbd4dfe
+remote:        └─┬ express@4.13.4
+remote:        ├─┬ accepts@1.2.13
+remote:        │ ├─┬ mime-types@2.1.10
+remote:        │ │ └── mime-db@1.22.0
+remote:        │ └── negotiator@0.5.3
+remote:        ├── array-flatten@1.1.1
+remote:        ├── content-disposition@0.5.1
+remote:        ├── content-type@1.0.1
+remote:        ├── cookie@0.1.5
+remote:        ├── cookie-signature@1.0.6
+remote:        ├─┬ debug@2.2.0
+remote:        │ └── ms@0.7.1
+remote:        ├── depd@1.1.0
+remote:        ├── escape-html@1.0.3
+remote:        ├── etag@1.7.0
+remote:        ├─┬ finalhandler@0.4.1
+remote:        │ └── unpipe@1.0.0
+remote:        ├── fresh@0.3.0
+remote:        ├── merge-descriptors@1.0.1
+remote:        ├── methods@1.1.2
+remote:        ├─┬ on-finished@2.3.0
+remote:        │ └── ee-first@1.1.1
+remote:        ├── parseurl@1.3.1
+remote:        ├── path-to-regexp@0.1.7
+remote:        ├─┬ proxy-addr@1.0.10
+remote:        │ ├── forwarded@0.1.0
+remote:        │ └── ipaddr.js@1.0.5
+remote:        ├── qs@4.0.0
+remote:        ├── range-parser@1.0.3
+remote:        ├─┬ send@0.13.1
+remote:        │ ├── destroy@1.0.4
+remote:        │ ├─┬ http-errors@1.3.1
+remote:        │ │ └── inherits@2.0.1
+remote:        │ ├── mime@1.3.4
+remote:        │ └── statuses@1.2.1
+remote:        ├── serve-static@1.10.2
+remote:        ├─┬ type-is@1.6.12
+remote:        │ └── media-typer@0.3.0
+remote:        ├── utils-merge@1.0.0
+remote:        └── vary@1.0.1
+remote:
+remote:
+remote: -----> Caching build
+remote:        Clearing previous node cache
+remote:        Saving 2 cacheDirectories (default):
+remote:        - node_modules
+remote:        - bower_components (nothing to cache)
+remote:
+remote: -----> Build succeeded!
+remote:        └── express@4.13.4
+remote:
+remote: -----> Discovering process types
+remote:        Procfile declares types     -> (none)
+remote:        Default types for buildpack -> web
+remote:
+remote: -----> Compressing...
+remote:        Done: 12.3M
+remote: -----> Launching...
+remote:        Released v3
+remote:        https://matteo-todo-api.herokuapp.com/ deployed to Heroku
+remote:
+remote: Verifying deploy... done.
+To https://git.heroku.com/matteo-todo-api.git
+ * [new branch]      master -> master
+
+C:\Users\admin\MATTEO_VAIO\codingTests\nodeCourse\todo-api>heroku logs
+2016-04-29T14:57:17.776325+00:00 heroku[api]: Enable Logplex by matteom.bianchini@gmail.com
+2016-04-29T14:57:17.776367+00:00 heroku[api]: Release v2 created by matteom.bianchini@gmail.com
+2016-04-29T14:58:14.156505+00:00 heroku[api]: Release v3 created by matteom.bianchini@gmail.com
+2016-04-29T14:58:14.155567+00:00 heroku[api]: Scale to web=1 by matteom.bianchini@gmail.com
+2016-04-29T14:58:14.156505+00:00 heroku[api]: Deploy 4a92a7a by matteom.bianchini@gmail.com
+2016-04-29T14:58:14.646200+00:00 heroku[slug-compiler]: Slug compilation started
+2016-04-29T14:58:14.646205+00:00 heroku[slug-compiler]: Slug compilation finished
+2016-04-29T14:58:15.595244+00:00 heroku[web.1]: Starting process with command `npm start`
+2016-04-29T14:58:18.675130+00:00 app[web.1]: npm ERR! node v5.11.0
+2016-04-29T14:58:18.678342+00:00 app[web.1]:
+2016-04-29T14:58:18.681001+00:00 app[web.1]: npm ERR! If you need help, you may report this error at:
+2016-04-29T14:58:18.680296+00:00 app[web.1]: npm ERR! missing script: start
+2016-04-29T14:58:18.681340+00:00 app[web.1]: npm ERR!     <https://github.com/npm/npm/issues>
+2016-04-29T14:58:18.707297+00:00 app[web.1]: npm ERR! Please include the following file with any support request:
+2016-04-29T14:58:18.707782+00:00 app[web.1]: npm ERR!     /app/npm-debug.log
+2016-04-29T14:58:18.673557+00:00 app[web.1]: npm ERR! Linux 3.13.0-79-generic
+2016-04-29T14:58:18.680674+00:00 app[web.1]: npm ERR!
+2016-04-29T14:58:18.704640+00:00 app[web.1]:
+2016-04-29T14:58:18.676206+00:00 app[web.1]: npm ERR! npm  v3.8.6
+2016-04-29T14:58:18.674620+00:00 app[web.1]: npm ERR! argv "/app/.heroku/node/bin/node" "/app/.heroku/node/bin/npm" "start"
+2016-04-29T14:58:20.006167+00:00 heroku[web.1]: Process exited with status 1
+2016-04-29T14:58:20.035581+00:00 heroku[web.1]: State changed from crashed to starting
+2016-04-29T14:58:20.034527+00:00 heroku[web.1]: State changed from starting to crashed
+2016-04-29T14:58:21.075041+00:00 heroku[web.1]: Starting process with command `npm start`
+2016-04-29T14:58:23.187272+00:00 app[web.1]:
+2016-04-29T14:58:23.176186+00:00 app[web.1]: npm ERR! If you need help, you may report this error at:
+2016-04-29T14:58:23.172106+00:00 app[web.1]: npm ERR! node v5.11.0
+2016-04-29T14:58:23.170879+00:00 app[web.1]: npm ERR! Linux 3.13.0-79-generic
+2016-04-29T14:58:23.171704+00:00 app[web.1]: npm ERR! argv "/app/.heroku/node/bin/node" "/app/.heroku/node/bin/npm" "start"
+2016-04-29T14:58:23.176023+00:00 app[web.1]: npm ERR!
+2016-04-29T14:58:23.176363+00:00 app[web.1]: npm ERR!     <https://github.com/npm/npm/issues>
+2016-04-29T14:58:23.172904+00:00 app[web.1]: npm ERR! npm  v3.8.6
+2016-04-29T14:58:23.187521+00:00 app[web.1]: npm ERR! Please include the following file with any support request:
+2016-04-29T14:58:23.174581+00:00 app[web.1]:
+2016-04-29T14:58:23.187674+00:00 app[web.1]: npm ERR!     /app/npm-debug.log
+2016-04-29T14:58:23.175839+00:00 app[web.1]: npm ERR! missing script: start
+2016-04-29T14:58:23.902808+00:00 heroku[web.1]: Process exited with status 1
+2016-04-29T14:58:23.919135+00:00 heroku[web.1]: State changed from starting to crashed
+2016-04-29T14:58:44.687194+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=matteo-todo-api.herokuapp.com request_id=07bccc6d-3883-4908-a2a0-ed08424593f9 fwd="2.233.
+72.96" dyno= connect= service= status=503 bytes=
