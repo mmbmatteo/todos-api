@@ -60,6 +60,35 @@ app.delete('/todos/:id', function (req, res) {
 	}
 });
 
+//PUT /todos/:id
+app.put('/todos/:id', function (req, res) {
+	var todoId = parseInt(req.params.id, 10);
+	var matchedToDo = _.findWhere(todos,  {id: todoId});
+	var body = _.pick(req.body, 'description', 'completed');
+	var validAttributes = {};
+
+	if (!matchedToDo) {
+		return res.status(404).json({"error": "not todo found with that id"});
+	}
+
+	//Validate 'completed' property
+	if (body.hasOwnProperty('completed') && _.isBoolean(body.completed)) {
+		validAttributes.completed = body.completed;
+	} else  if (body.hasOwnProperty('completed')){
+		return res.status(400).json({"error":"completed field is not a boolean"})
+	}
+
+	//Validate 'description' property
+	if (body.hasOwnProperty('description') && _.isString(body.description) && body.description.trim().length > 0) {
+		validAttributes.description = body.description.trim();
+	} else  if (body.hasOwnProperty('description')){
+		return res.status(400).json({"error":"description field is either not a string or empty"})
+	}
+
+	_.extend(matchedToDo, validAttributes);
+	res.json(matchedToDo);
+});
+
 //LISTEN
 app.listen(PORT, function (){
 	console.log('Express listening on port ' + PORT);
